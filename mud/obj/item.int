@@ -588,6 +588,7 @@ func ini # arg0 = personagem que morreu, arg1 = variável p_corpo_tipo
   volobj = arg0.volobj, pesoobj = arg0.pesoobj
   tempo = 10 * arg0.varherda("p_corpo_tempo")
   tipocorpo = arg1
+  var.z_atktipo = arg0.varherda("p_atktipo") # Preserva o tipo de ataque do personagem morto para possível reanimação
   $mensvis.p(arg0, este)
   $mensvis.mens = arg0.ident2
   var.z_ident = $mensvis.txt(arg0.varherda("p_corpo_ident"), nulo)
